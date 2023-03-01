@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AI Animation App</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+		canvas {
+			display: block;
+			margin: 50px auto;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas">helo</canvas>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.10.0"></script>
+	<script>
+		let model;
+
+		function preload() {
+			model = tf.loadLayersModel('model.json');
+		}
+
+		function setup() {
+			createCanvas(400, 400);
+			frameRate(30);
+		}
+
+		function draw() {
+			background(255);
+			let input = tf.tensor2d([[random(), random(), random()]]);
+			let output = model.predict(input);
+			let x = output.dataSync()[0] * width;
+			let y = output.dataSync()[1] * height;
+			let r = output.dataSync()[2] * 50;
+			noStroke();
+			fill(random(255), random(255), random(255), 100);
+			ellipse(x, y, r, r);
+		}
+	</script>
+</body>
+</html>
