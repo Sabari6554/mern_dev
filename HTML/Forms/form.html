@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HTML-Forms" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <section>
+      <!-- header -->
+      <header>
+        <h1>Club Membership Registration</h1>
+        <p>Complete the form below to sign up for our membership service.</p>
+      </header>
+      <!-- form -->
+      <form action="#" method="post">
+        <ul>
+          <li><label for="Name" class="name">Name</label></li>
+          <li>
+            <input type="text" name="FirstName" id="FirstName" /><input
+              type="text"
+              name="LastName"
+              id="LastName"
+            />
+          </li>
+
+          <li>
+            <label class="Fname" for="FirstName">First Name</label>
+            <label class="Lname" for="LastName">Last Name</label>
+          </li>
+          <li>
+            <label for="email">E-mail</label
+            ><label for="PhoneNumber">Phone Number</label>
+          </li>
+          <li>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="ex:myname@example.com"
+            /><input type="number" name="PhoneNumber" id="PhoneNumber" />
+          </li>
+          <li><label for="PhoneNumber">Phone Number</label></li>
+          <li><label for="address">Address</label></li>
+          <li><input type="text" name="address" id="address_1" /></li>
+          <li><label for="address_1">Street Address</label></li>
+          <li><input type="text" name="address" id="address_2" /></li>
+          <li><label for="address_2">Street Address Line 2</label></li>
+          <li>
+            <input type="text" name="city" id="city" /><input
+              type="text"
+              name="state"
+              id="state"
+            />
+          </li>
+          <li>
+            <label for="city">City</label
+            ><label for="state">State/Province</label>
+          </li>
+        </ul>
+      </form>
+    </section>
+  </body>
+</html>

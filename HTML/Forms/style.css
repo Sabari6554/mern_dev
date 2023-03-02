@@ -1,0 +1,38 @@
+body {
+  background-color: rgb(210, 189, 219);
+  font-family: sans-serif;
+}
+section {
+  margin: 0 20%;
+  background-color: white;
+  margin-top: 100px;
+  padding: 20px 0px;
+  color: rgb(82, 80, 80);
+}
+header {
+  border-bottom: 1px solid gray;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.name {
+  font-size: 20px;
+}
+#LastName {
+  margin-left: 30px;
+}
+h1 {
+  color: black;
+  font-size: 35px;
+  margin: 0 40px;
+}
+p {
+  font-weight: 200;
+  font-size: 19px;
+  margin: 0 30px;
+  padding: 20px;
+}
